@@ -1,8 +1,10 @@
 archetype (adl_version=1.4)
+    openEHR-EHR-ACTION.maternal_care-xxxxxxxxx.v1
+specialize
     openEHR-EHR-ACTION.maternal_care.v0
 
 concept
-    [at0000]
+    [at0000.1]
 
 language
     original_language = <[ISO_639-1::en]>
@@ -19,7 +21,7 @@ description
     >
 
 definition
-    ACTION[at0000] matches {
+    ACTION[at0000.1] matches {
         ism_transition matches {
             ISM_TRANSITION[at0002] matches {
                 current_state matches {
@@ -158,6 +160,7 @@ definition
                     archetype_id/value matches {/.*/}
             }
         }
+        protocol existence matches {0..1} matches {*}
     }
 
 ontology
@@ -165,11 +168,6 @@ ontology
     term_definitions = <
         ["en"] = <
             items = <
-                ["at0000"] = <
-                    text = <"Maternal care">
-                    description = <"unknown">
-
-                >
                 ["at0002"] = <
                     text = <"Planned">
                     description = <"This is a state descripition">
@@ -210,15 +208,15 @@ ontology
                     description = <"This is a state descripition">
 
                 >
+                ["at0000.1"] = <
+                    text = <"Maternal care">
+                    description = <"unknown">
+
+                >
             >
         >
         ["fi"] = <
             items = <
-                ["at0000"] = <
-                    text = <"*Maternal care(en)">
-                    description = <"*unknown(en)">
-
-                >
                 ["at0002"] = <
                     text = <"*Planned(en)">
                     description = <"*This is a state descripition(en)">
@@ -257,17 +255,17 @@ ontology
                 ["at0009"] = <
                     text = <"*Completed(en)">
                     description = <"*This is a state descripition(en)">
+
+                >
+                ["at0000.1"] = <
+                    text = <"*Maternal care(en)">
+                    description = <"*unknown(en)">
 
                 >
             >
         >
         ["sv"] = <
             items = <
-                ["at0000"] = <
-                    text = <"*Maternal care(en)">
-                    description = <"*unknown(en)">
-
-                >
                 ["at0002"] = <
                     text = <"*Planned(en)">
                     description = <"*This is a state descripition(en)">
@@ -306,6 +304,11 @@ ontology
                 ["at0009"] = <
                     text = <"*Completed(en)">
                     description = <"*This is a state descripition(en)">
+
+                >
+                ["at0000.1"] = <
+                    text = <"*Maternal care(en)">
+                    description = <"*unknown(en)">
 
                 >
             >
