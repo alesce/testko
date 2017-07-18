@@ -1,8 +1,10 @@
 archetype (adl_version=1.4)
+    openEHR-EHR-ADMIN_ENTRY.admit_source-gfdgfdg.v1
+specialize
     openEHR-EHR-ADMIN_ENTRY.admit_source.v0
 
 concept
-    [at0000]
+    [at0000.1]
 
 language
     original_language = <[ISO_639-1::en]>
@@ -12,11 +14,15 @@ language
             author = <
                 ["name"] = <"?">
             >
+            other_details = <
+            >
         >
         ["sv"] = <
             language = <[ISO_639-1::sv]>
             author = <
                 ["name"] = <"?">
+            >
+            other_details = <
             >
         >
     >
@@ -47,7 +53,7 @@ description
     >
 
 definition
-    ADMIN_ENTRY[at0000] matches {
+    ADMIN_ENTRY[at0000.1] matches {
         data matches {
             ITEM_TREE[at0001] matches {
                 items existence matches {0..1} cardinality matches {0..*; unordered} matches {
@@ -71,11 +77,6 @@ ontology
     term_definitions = <
         ["en"] = <
             items = <
-                ["at0000"] = <
-                    text = <"Admit source">
-                    description = <"unknown">
-
-                >
                 ["at0001"] = <
                     text = <"Tree">
                     description = <"@ internal @">
@@ -91,15 +92,15 @@ ontology
                     description = <"Ability to function">
 
                 >
+                ["at0000.1"] = <
+                    text = <"Admit source">
+                    description = <"unknown">
+
+                >
             >
         >
         ["fi"] = <
             items = <
-                ["at0000"] = <
-                    text = <"Mistä tuli">
-                    description = <"*unknown(en)">
-
-                >
                 ["at0001"] = <
                     text = <"Tree">
                     description = <"*@ internal @(en)">
@@ -115,15 +116,15 @@ ontology
                     description = <"*Ability to function(en)">
 
                 >
+                ["at0000.1"] = <
+                    text = <"Mistä tuli">
+                    description = <"*unknown(en)">
+
+                >
             >
         >
         ["sv"] = <
             items = <
-                ["at0000"] = <
-                    text = <"Kommer ifrån">
-                    description = <"*unknown(en)">
-
-                >
                 ["at0001"] = <
                     text = <"Tree">
                     description = <"*@ internal @(en)">
@@ -137,6 +138,11 @@ ontology
                 ["at0003"] = <
                     text = <"Funktionsförmåga">
                     description = <"*Ability to function(en)">
+
+                >
+                ["at0000.1"] = <
+                    text = <"Kommer ifrån">
+                    description = <"*unknown(en)">
 
                 >
             >
