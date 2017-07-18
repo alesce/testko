@@ -1,8 +1,10 @@
 archetype (adl_version=1.4)
+    openEHR-EHR-CLUSTER.exam_eye_pupil-aaaaa.v1
+specialize
     openEHR-EHR-CLUSTER.exam_eye_pupil.v5
 
 concept
-    [at0000]
+    [at0000.1]
 
 language
     original_language = <[ISO_639-1::en]>
@@ -14,6 +16,8 @@ language
                 ["organisation"] = <"Tieto Healthcare & Welfare Oy">
                 ["email"] = <"kalle.vuorinen@tieto.com">
             >
+            other_details = <
+            >
         >
         ["sv"] = <
             language = <[ISO_639-1::sv]>
@@ -21,6 +25,8 @@ language
                 ["name"] = <"Harriet Haglund">
                 ["organisation"] = <"Tieto Healthcare & Welfare Oy">
                 ["email"] = <"harriet.haglund@tieto.com">
+            >
+            other_details = <
             >
         >
     >
@@ -103,7 +109,7 @@ Not to be used to record stand-alone clinical observations or measurements or te
     >
 
 definition
-    CLUSTER[at0000] matches {
+    CLUSTER[at0000.1] matches {
         items cardinality matches {1..*; unordered} matches {
             ELEMENT[at0001] occurrences matches {0..1} matches {
                 value existence matches {0..1} matches {
@@ -280,11 +286,6 @@ ontology
     term_definitions = <
         ["en"] = <
             items = <
-                ["at0000"] = <
-                    text = <"Examination of a pupil">
-                    description = <"Findings observed during the physical examination of a pupil.">
-
-                >
                 ["at0001"] = <
                     text = <"Eye examined">
                     description = <"Identification of the eye under examination.">
@@ -511,15 +512,15 @@ ontology
                     text = <"Length">
 
                 >
+                ["at0000.1"] = <
+                    text = <"Examination of a pupil">
+                    description = <"Findings observed during the physical examination of a pupil.">
+
+                >
             >
         >
         ["fi"] = <
             items = <
-                ["at0000"] = <
-                    text = <"Pupilin tutkimus">
-                    description = <"Findings observed during the physical examination of a pupil.(en)">
-
-                >
                 ["at0001"] = <
                     text = <"Silmän valinta">
                     description = <"Identification of the eye under examination.(en)">
@@ -746,15 +747,15 @@ ontology
                     text = <"*Length(en)">
 
                 >
+                ["at0000.1"] = <
+                    text = <"Pupilin tutkimus">
+                    description = <"Findings observed during the physical examination of a pupil.(en)">
+
+                >
             >
         >
         ["sv"] = <
             items = <
-                ["at0000"] = <
-                    text = <"Undersökning pupill">
-                    description = <"Findings observed during the physical examination of a pupil.(en)">
-
-                >
                 ["at0001"] = <
                     text = <"Undersökt öga">
                     description = <"Identification of the eye under examination.(en)">
@@ -979,6 +980,11 @@ ontology
                 >
                 ["at0045"] = <
                     text = <"*Length(en)">
+
+                >
+                ["at0000.1"] = <
+                    text = <"Undersökning pupill">
+                    description = <"Findings observed during the physical examination of a pupil.(en)">
 
                 >
             >
