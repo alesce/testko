@@ -1,8 +1,10 @@
 archetype (adl_version=1.4)
+    openEHR-EHR-CLUSTER.composition_state-ewwewewe.v1
+specialize
     openEHR-EHR-CLUSTER.composition_state.v0
 
 concept
-    [at0000]
+    [at0000.1]
 
 language
     original_language = <[ISO_639-1::en]>
@@ -12,11 +14,15 @@ language
             author = <
                 ["name"] = <"?">
             >
+            other_details = <
+            >
         >
         ["sv"] = <
             language = <[ISO_639-1::sv]>
             author = <
                 ["name"] = <"?">
+            >
+            other_details = <
             >
         >
     >
@@ -47,7 +53,7 @@ description
     >
 
 definition
-    CLUSTER[at0000] matches {
+    CLUSTER[at0000.1] matches {
         items cardinality matches {1..*; unordered} matches {
             ELEMENT[at0001] matches {
                 value existence matches {0..1} matches {
@@ -64,11 +70,6 @@ ontology
     term_definitions = <
         ["en"] = <
             items = <
-                ["at0000"] = <
-                    text = <"Composition state">
-                    description = <"unknown">
-
-                >
                 ["at0001"] = <
                     text = <"State">
                     description = <"*">
@@ -89,15 +90,15 @@ ontology
                     description = <"*">
 
                 >
+                ["at0000.1"] = <
+                    text = <"Composition state">
+                    description = <"unknown">
+
+                >
             >
         >
         ["fi"] = <
             items = <
-                ["at0000"] = <
-                    text = <"Komposition tila">
-                    description = <"*unknown(en)">
-
-                >
                 ["at0001"] = <
                     text = <"Tila">
                     description = <"**(en)">
@@ -118,15 +119,15 @@ ontology
                     description = <"**(en)">
 
                 >
+                ["at0000.1"] = <
+                    text = <"Komposition tila">
+                    description = <"*unknown(en)">
+
+                >
             >
         >
         ["sv"] = <
             items = <
-                ["at0000"] = <
-                    text = <"Skapandeläge">
-                    description = <"*unknown(en)">
-
-                >
                 ["at0001"] = <
                     text = <"Tillstånd">
                     description = <"**(en)">
@@ -145,6 +146,11 @@ ontology
                 ["at0004"] = <
                     text = <"Godkänd">
                     description = <"**(en)">
+
+                >
+                ["at0000.1"] = <
+                    text = <"Skapandeläge">
+                    description = <"*unknown(en)">
 
                 >
             >
