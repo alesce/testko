@@ -1,0 +1,260 @@
+archetype (adl_version=1.4)
+    openEHR-EHR-ACTION.ysdsyds.v0
+
+concept
+    [at0000]
+
+language
+    original_language = <[ISO_639-1::sl]>
+
+description
+    original_author = <
+        ["name"] = <"">
+    >
+    lifecycle_state = <"0">
+    details = <
+        ["sl"] = <
+            language = <[ISO_639-1::sl]>
+        >
+    >
+    other_details = <
+        ["MD5-CAM-1.0.1"] = <"F38ABCBAB544C1CCC458B2A87505695E">
+    >
+
+definition
+    ACTION[at0000] matches {
+        ism_transition matches {
+            ISM_TRANSITION[at0007] matches {
+                current_state matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [openehr::526]
+                        }
+                    }
+                }
+                careflow_step existence matches {0..1} matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [local::at0007]
+                        }
+                    }
+                }
+            }
+            ISM_TRANSITION[at0006] matches {
+                current_state matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [openehr::529]
+                        }
+                    }
+                }
+                careflow_step existence matches {0..1} matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [local::at0006]
+                        }
+                    }
+                }
+            }
+            ISM_TRANSITION[at0003] matches {
+                current_state matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [openehr::245]
+                        }
+                    }
+                }
+                careflow_step existence matches {0..1} matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [local::at0003]
+                        }
+                    }
+                }
+            }
+            ISM_TRANSITION[at0005] matches {
+                current_state matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [openehr::245]
+                        }
+                    }
+                }
+                careflow_step existence matches {0..1} matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [local::at0005]
+                        }
+                    }
+                }
+            }
+            ISM_TRANSITION[at0008] matches {
+                current_state matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [openehr::245]
+                        }
+                    }
+                }
+                careflow_step existence matches {0..1} matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [local::at0008]
+                        }
+                    }
+                }
+            }
+            ISM_TRANSITION[at0009] matches {
+                current_state matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [openehr::245]
+                        }
+                    }
+                }
+                careflow_step existence matches {0..1} matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [local::at0009]
+                        }
+                    }
+                }
+            }
+            ISM_TRANSITION[at0010] matches {
+                current_state matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [openehr::245]
+                        }
+                    }
+                }
+                careflow_step existence matches {0..1} matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [local::at0010]
+                        }
+                    }
+                }
+            }
+            ISM_TRANSITION[at0011] matches {
+                current_state matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [openehr::245]
+                        }
+                    }
+                }
+                careflow_step existence matches {0..1} matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [local::at0011]
+                        }
+                    }
+                }
+            }
+            ISM_TRANSITION[at0012] matches {
+                current_state matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [openehr::245]
+                        }
+                    }
+                }
+                careflow_step existence matches {0..1} matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [local::at0012]
+                        }
+                    }
+                }
+            }
+            ISM_TRANSITION[at0004] matches {
+                current_state matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [openehr::530]
+                        }
+                    }
+                }
+                careflow_step existence matches {0..1} matches {
+                    DV_CODED_TEXT matches {
+                        defining_code matches {
+                            [local::at0004]
+                        }
+                    }
+                }
+            }
+        }
+        description matches {
+            ITEM_TREE[at0001] matches {*}
+        }
+    }
+
+ontology
+    terminologies_available = <"sl", ...>
+    term_definitions = <
+        ["sl"] = <
+            items = <
+                ["at0000"] = <
+                    text = <"Ysdsyds">
+                    description = <"unknown">
+
+                >
+                ["at0001"] = <
+                    text = <"Drevo">
+                    description = <"@ internal @">
+
+                >
+                ["at0003"] = <
+                    text = <"Active">
+                    description = <"dfdf">
+
+                >
+                ["at0004"] = <
+                    text = <"ActiveSuspended">
+                    description = <"dfd">
+
+                >
+                ["at0005"] = <
+                    text = <"Active">
+                    description = <"*">
+
+                >
+                ["at0006"] = <
+                    text = <"Scheduled">
+                    description = <"*">
+
+                >
+                ["at0007"] = <
+                    text = <"Planned">
+                    description = <"*">
+
+                >
+                ["at0008"] = <
+                    text = <"Active">
+                    description = <"*">
+
+                >
+                ["at0009"] = <
+                    text = <"Active">
+                    description = <"*">
+
+                >
+                ["at0010"] = <
+                    text = <"Active">
+                    description = <"*">
+
+                >
+                ["at0011"] = <
+                    text = <"Active">
+                    description = <"*">
+
+                >
+                ["at0012"] = <
+                    text = <"Active">
+                    description = <"*">
+
+                >
+            >
+        >
+    >
