@@ -1,8 +1,10 @@
 archetype (adl_version=1.4)
+    openEHR-EHR-CLUSTER.problem_diagnose_extension-tieto-sssss.v1
+specialize
     openEHR-EHR-CLUSTER.problem_diagnose_extension-tieto.v0
 
 concept
-    [at0000]
+    [at0000.1]
 
 language
     original_language = <[ISO_639-1::en]>
@@ -12,11 +14,15 @@ language
             author = <
                 ["name"] = <"?">
             >
+            other_details = <
+            >
         >
         ["sv"] = <
             language = <[ISO_639-1::sv]>
             author = <
                 ["name"] = <"?">
+            >
+            other_details = <
             >
         >
     >
@@ -47,7 +53,7 @@ description
     >
 
 definition
-    CLUSTER[at0000] matches {
+    CLUSTER[at0000.1] matches {
         items cardinality matches {1..*; unordered} matches {
             ELEMENT[at0001] occurrences matches {0..1} matches {
                 value existence matches {0..1} matches {
@@ -64,42 +70,42 @@ ontology
     term_definitions = <
         ["en"] = <
             items = <
-                ["at0000"] = <
-                    text = <"Problem diagnose extension">
-                    description = <"unknown">
-
-                >
                 ["at0001"] = <
                     text = <"Permanent diagnose">
                     description = <"Permanent diagnose kept open for chronic/long-time health issues.">
+
+                >
+                ["at0000.1"] = <
+                    text = <"Problem diagnose extension">
+                    description = <"unknown">
 
                 >
             >
         >
         ["fi"] = <
             items = <
-                ["at0000"] = <
-                    text = <"Oire/diagnoosin lisämerkinnät">
-                    description = <"*unknown(en)">
-
-                >
                 ["at0001"] = <
                     text = <"Pysyvä diagnoosi">
                     description = <"Pysyvä diagnoosi kroonisille tai pitkäaikaissaurausten merkitsemiseen">
+
+                >
+                ["at0000.1"] = <
+                    text = <"Oire/diagnoosin lisämerkinnät">
+                    description = <"*unknown(en)">
 
                 >
             >
         >
         ["sv"] = <
             items = <
-                ["at0000"] = <
-                    text = <"Diagnos">
-                    description = <"(sv)unknown(en)">
-
-                >
                 ["at0001"] = <
                     text = <"Kronisk">
                     description = <"(sv)Permanent diagnose kept open for chronic/long-time health issues.(en)">
+
+                >
+                ["at0000.1"] = <
+                    text = <"Diagnos">
+                    description = <"(sv)unknown(en)">
 
                 >
             >
